@@ -1,1 +1,13 @@
-/* CSS declarations go here */
+body {
+	background: url(school.png)
+}
+
+.intro .title-wrapper {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.intro .title {
+	font-size: 4.2rem;
+	font-weight: 300;
+}
