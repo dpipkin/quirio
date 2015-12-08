@@ -2,13 +2,38 @@
   <title>quirio</title>
 </head>
 
-<body>
-  <h1>Welcome to Meteor!</h1>
+<body class="grey lighten-3">
+  <nav>
+    <div class="nav-wrapper blue">
+      <div class="row">
+        <div class="col s12">
+          <a href="#" class="brand-logo">quirio</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>Login</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-  {{> hello}}
+  <div class="container">
+      {{> hello}}
+  </div>
 </body>
 
 <template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+  <div class="card">
+    <div class="card-content">
+      <div class="card-title">Quick Demo</div>
+      <p>You've pressed the button {{counter}} times.</p>
+      <div class="card-action">
+        <button class="waves-effect waves-light btn orange">Click Me</button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="intro">
+  <div class="card">
+    <dive class=
 </template>
