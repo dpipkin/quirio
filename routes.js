@@ -2,15 +2,21 @@ Router.route('/', function() {
 	this.render('intro');
 });
 
-Router.route('/app');
-Router.route('/login');
-
-Router.onBeforeAction(function() {
-	if (!Meteor.userId()) {
-		this.render('login');
-	} else {
-		this.next();
-	}
-}, {
-	only: ['app']
+Router.route('/app', {
+  onBeforeAction: function() {
+    if (!Meteor.userId()) {
+      this.redirect('login');
+    } else {
+      this.next();
+    }
+  }
+});
+Router.route('/login', {
+  onBeforeAction: function() {
+    if (Meteor.userId()) {
+      this.redirect('app');
+    } else {
+      this.next();
+    }
+  }
 });
