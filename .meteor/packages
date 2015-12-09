@@ -20,6 +20,6 @@ spacebars
 check
 materialize:materialize
 accounts-password
-accounts-ui
 iron:router
 meteortypescript:typescript-libs
+accounts-ui
