@@ -2,7 +2,8 @@ Router.route('/', function() {
 	this.render('intro');
 });
 
-Router.route('/app', {
+Router.route('/profile', {
+  layoutTemplate: 'app',
   onBeforeAction: function() {
     if (!Meteor.userId()) {
       this.redirect('login');
@@ -14,9 +15,15 @@ Router.route('/app', {
 Router.route('/login', {
   onBeforeAction: function() {
     if (Meteor.userId()) {
-      this.redirect('app');
+      this.redirect('profile');
     } else {
       this.next();
     }
   }
+});
+Router.route('modules', {
+  layoutTemplate: 'app'
+});
+Router.route('assessments', {
+  layoutTemplate: 'app'
 });
